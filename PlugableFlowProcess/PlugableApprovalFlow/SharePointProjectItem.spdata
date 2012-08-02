@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Workflow" DefaultFile="PlugableApprovalFlow.cs" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="PlugableApprovalFlow\" Type="ElementManifest" />
+    <ProjectItemFile Source="AssociationForm.aspx" Target="LAYOUTS\PlugableFlowProcess\PlugableApprovalFlow\" Type="TemplateFile" />
+  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="WorkflowType" Value="List" />
+  </ExtensionData>
+</ProjectItem>

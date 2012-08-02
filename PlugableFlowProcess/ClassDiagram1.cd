@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PlugableFlowProcess.CreateRoomApprovalProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CreateRoomApprovalProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlugableFlowProcess.EmailDefinition">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIABAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmailDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlugableFlowProcess.EnterpriseApprovalProcessorFactory">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnterpriseApprovalProcessorFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlugableFlowProcess.GeneralApprovalProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneralApprovalProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlugableFlowProcess.JobRequestApprovalProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JobRequestApprovalProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlugableFlowProcess.Features.PlugableFlowProcessFeature.PlugableFlowProcessFeatureEventReceiver">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Features\PlugableFlowProcessFeature\PlugableFlowProcessFeature.EventReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlugableFlowProcess.PlugableApprovalFlow.AssociationForm" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="PlugableFlowProcess.PlugableApprovalFlow.AssociationForm.WorkflowAssociationType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PlugableApprovalFlow\AssociationForm.aspx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="PlugableFlowProcess.PlugableApprovalFlow.AssociationForm.AssociationParams" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PlugableApprovalFlow\AssociationForm.aspx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIAQBSQACgAAAJAIEAAACABgAAAAAgBIAQpBIgAgA=</HashCode>
+      <FileName>PlugableApprovalFlow\AssociationForm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlugableFlowProcess.PlugableApprovalFlow.PlugableApprovalFlow" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAgAAMAAIACAQAAAAAAAAAAAAAgAAI=</HashCode>
+      <FileName>PlugableApprovalFlow\PlugableApprovalFlow.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="approvalProcessor" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="PlugableFlowProcess.IEnterpriseApprovalProcessor">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IEnterpriseApprovalProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

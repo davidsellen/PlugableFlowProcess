@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2dd97c82-b9f9-48c4-b347-bf1cacc1ecc5" solutionId="2dd97c82-b9f9-48c4-b347-bf1cacc1ecc5" resetWebServer="false" name="PlugableFlowProcess" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Microsoft.Practices.ServiceLocation.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Library\Microsoft.Practices.ServiceLocation.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Practices.ServiceLocation" namespaceName="Microsoft.Practices.ServiceLocation" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Practices.SharePoint.Common.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Library\Microsoft.Practices.SharePoint.Common.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Practices.SharePoint.Common" namespaceName="Microsoft.Practices.SharePoint.Common" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="fb9e1f9e-66c6-4133-a210-77797f58081a" />
+  </features>
+</package>

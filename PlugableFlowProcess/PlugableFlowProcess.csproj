@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC1E8A3A-1FCA-4AE0-9A06-32DF576A6132}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlugableFlowProcess</RootNamespace>
+    <AssemblyName>PlugableFlowProcess</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.SharePoint.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ef4330804b3c4129, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\Microsoft.Practices.SharePoint.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateRoomApprovalProcessor.cs" />
+    <Compile Include="EmailDefinition.cs" />
+    <Compile Include="EnterpriseApprovalProcessorFactory.cs" />
+    <Compile Include="Features\PlugableFlowProcessFeature\PlugableFlowProcessFeature.EventReceiver.cs">
+      <DependentUpon>PlugableFlowProcessFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralApprovalProcessor.cs" />
+    <Compile Include="IEnterpriseApprovalProcessor.cs" />
+    <Compile Include="JobRequestApprovalProcessor.cs" />
+    <Compile Include="LocationApprovalProcessor.cs" />
+    <Compile Include="PlugableApprovalFlow\AssociationForm.aspx.cs">
+      <DependentUpon>AssociationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlugableApprovalFlow\AssociationForm.aspx.designer.cs">
+      <DependentUpon>AssociationForm.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugableApprovalFlow\PlugableApprovalFlow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlugableApprovalFlow\PlugableApprovalFlow.Designer.cs">
+      <DependentUpon>PlugableApprovalFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Features\PlugableFlowProcessFeature\PlugableFlowProcessFeature.feature">
+      <FeatureId>{fb9e1f9e-66c6-4133-a210-77797f58081a}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{2dd97c82-b9f9-48c4-b347-bf1cacc1ecc5}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="PlugableApprovalFlow\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d871122f-3471-435c-a6ed-8dd532997fe0}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Features\PlugableFlowProcessFeature\PlugableFlowProcessFeature.Template.xml">
+      <DependentUpon>PlugableFlowProcessFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="PlugableApprovalFlow\AssociationForm.aspx" />
+    <Content Include="PlugableApprovalFlow\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>
